@@ -39,7 +39,7 @@
         </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="loginModal" class="modal fade" role="dialoge">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
@@ -90,7 +90,91 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#form1" class="btn btn-block btn-warning btn-sm " data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+825 123445243</strong>" data-placement="bottom" role="button" >Reserve Table</a>
+                    <!-- <a href="#form1" class="btn btn-block btn-warning btn-sm " data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+825 123445243</strong>" data-placement="bottom" role="button" >Reserve Table</a> -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Modal" data-html="true" title="Or Call us at <br><strong>+825 123445243</strong>">Reserve Table</button>
+                </div>
+
+                    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            <h3 class="modal-title" id="Modal">Reserve a Table
+                            <button type="button" class="close" id="X" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </h3>
+                        </div> 
+                    </div>
+                    <div class="modal-body">
+                        <form id="form1">
+                            <div class="form-group row">
+                                <label for="guests" class="col-sm-3 col-form-label">Number of Guests</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="1" name="1" class="custom-control-input">
+                                    <label class="custom-control-label" for="1">1</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="2" name="2" class="custom-control-input">
+                                    <label class="custom-control-label" for="2">2</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="3" name="3" class="custom-control-input">
+                                    <label class="custom-control-label" for="3">3</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="4" name="4" class="custom-control-input">
+                                    <label class="custom-control-label" for="4">4</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="5" name="5" class="custom-control-input">
+                                    <label class="custom-control-label" for="5">5</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="6" name="6" class="custom-control-input">
+                                    <label class="custom-control-label" for="6">6</label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                 <label for="ns" class="col-xs-12 col-sm-3 col-form-label">Section</label>
+                                <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="non-smoking" id="non-smoking" autocomplete="off" checked> Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="smoking" id="smoking" autocomplete="off"> Smoking
+                                    </label>
+ -->
+                               
+                                <div class="col-xs-12 col-sm-3">
+                                    <button type="button" class="btn btn-success active" id="ns" name="Non-Smoking">Non-Smoking</button>
+                                </div>
+                                <div class="col-xs-12 col-sm-2">
+                                    <button type="button" id="smoking" class="btn btn-danger" name="Smoking">Smoking</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="guests" class="col-xs-12 col-sm-3 col-form-label">Date and Time</label>
+                                <div class="col-xs-12 col-sm-4">
+                                    <input type="text" name="date" placeholder="Date">
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <input type="text" name="time" placeholder="Time">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-xs-12 col-sm-3 col-form-label"></label>
+                                <div class=" col-xs-12 col-sm-2">
+                                    <button type="cancel" class="btn btn-index"><a href="./index.html">Cancel</button>
+                                </div>
+                                <div class="col-xs-12 col-sm-2">
+                                    <button type="submit" class="btn btn-primary" id="rev">Reserve</button>
+                            </div>
+                        </div>           
+                    </form>
+                </div>
             </div>
         </div>
     </header>
@@ -181,7 +265,8 @@
                 </div>
             </div>
         </div> 
-        <div class="row row-content">
+
+        <!-- <div class="row row-content">
             <div class="card align-self-center offset-sm-3">
                 <h3 class="card-header col-sm-12 bg-warning text-white">Reserve a Table</h3>
                     <div class="card-body">
@@ -230,7 +315,8 @@
                         </form>
                 </div>
             </div>
-        </div>
+        </div> -->
+        
     </div>
 
     <footer class="footer">
@@ -283,11 +369,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
