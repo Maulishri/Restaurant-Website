@@ -43,7 +43,7 @@ body{
 	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	padding: 10px;
-}
+} 
 
 .carousel{
 	background: #512DA8;
@@ -69,3 +69,11 @@ body{
 	bottom: 0px;
 }
 
+.modal-header{
+	background-color: #512DA8;
+	color: floralwhite;
+}
+
+.modal-body{
+	background-color: #D1C4E9;
+}
