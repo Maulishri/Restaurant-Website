@@ -31,7 +31,8 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal"data-target="#loginModal">
+                    <!-- <a data-toggle="modal" data-target="#loginModal"> -->
+                    <a id="loginBtn">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
@@ -39,6 +40,7 @@
         </div>
     </nav>
 
+   <!--  Login Modal -->
     <div id="loginModal" class="modal fade" role="dialoge">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
@@ -91,10 +93,12 @@
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
                     <!-- <a href="#form1" class="btn btn-block btn-warning btn-sm " data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+825 123445243</strong>" data-placement="bottom" role="button" >Reserve Table</a> -->
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Modal" data-html="true" title="Or Call us at <br><strong>+825 123445243</strong>">Reserve Table</button>
+                    <!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Modal" data-html="true" title="Or Call us at <br><strong>+825 123445243</strong>">Reserve Table</button> -->
+                    <a class="btn btn-warning" id="reserveBtn" role="button" title="Or Call us at <br><strong>+825 123445243</strong>">Reserve Table</a>
                 </div>
+            </div>
 
-                    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal fade" id="reserveModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -396,10 +400,18 @@
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
             });
+
+            $("#reserveBtn").click(function(){
+                $("#reserveModal").modal();
+            });
+            /*LoginModal*/
+            $("#loginBtn").click(function(){
+                $("#loginModal").modal();
+            });
+        });
             // $("#carousel-play").click(function(){
             //     $("#mycarousel").carousel('cycle');
             // });
-        });
     </script>
     <!-- <script>
         $(document).ready(function(){
